@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Blocker",
+  "version": "1.0",
+  "description": "Blocks access to YouTube with a configurable timer",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking", 
+    "storage",
+    "tabs",
+    "*://*.youtube.com/*",
+    "*://*.youtu.be/*"
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-uCV/XMVMjPml8F9RvWTfGsPQ/EhhhBz3XeSaAIpui94='; object-src 'self'",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/border-48.png",
+	  "96": "icons/border-96.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "YouTube Blocker"
+  },
+  "icons": {
+    "48": "icons/border-48.png",
+	"96": "icons/border-96.png"
+  },
+  "web_accessible_resources": [
+    "stop.html"
+  ]
+}
